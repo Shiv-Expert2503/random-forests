@@ -82,7 +82,7 @@ class App:
                 self.statement = tk.Label(text=f"{nameValue.get()}'s birth year cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
-        def check_name():
+        def check_brach():
             #simple method to check the validity of a user input birth year
             self.statement.destroy()
             today = date.today()
