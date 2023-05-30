@@ -82,6 +82,22 @@ class App:
                 self.statement = tk.Label(text=f"{nameValue.get()}'s birth year cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
+        def check_name():
+            #simple method to check the validity of a user input birth year
+            self.statement.destroy()
+            today = date.today()
+            try:
+                year = int(self.yearEntry.get())
+                if today.year - year < 0:
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s age cannot be negative.", font="courier 10", bg="lightblue")
+                    self.statement.grid(row=6, column=1, pady=15)
+                    return False
+                else:
+                    return True
+            except Exception as e:
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth year cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
+                return False
 
         def check_month():
             #simple method to check the validity of a user input birth month
