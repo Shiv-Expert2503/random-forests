@@ -54,14 +54,14 @@ class App:
                     if (i>='a' and i<='z') or (i>='A' and i<='Z'):
                         pass
                     else:
-                        self.statement = tk.Label(text=f"{nameValue.get()} is not a\n valid name! Please\n enter a valid name .", font="courier 10", bg="lightblue")
+                        self.statement = tk.Label(text=f"{nameValue.get()} is not a valid name! Please enter a valid name .", font="courier 10", bg="lightblue")
                         self.statement.grid(row=6, column=1, pady=15)
                         return False
 
                 return True
             #the code will never go to this except statement but we have written this just to be at a safer side
             except Exception as e:
-                self.statement = tk.Label(text="Please try with a\n different name .", font="courier 10", bg="lightblue")
+                self.statement = tk.Label(text="Please try with a different name .", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
 
@@ -73,13 +73,13 @@ class App:
             try:
                 year = int(self.yearEntry.get())
                 if today.year - year < 0:
-                    self.statement = tk.Label(text=f"{nameValue.get()}'s age cannot\n be negative.", font="courier 10", bg="lightblue")
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s age cannot be negative.", font="courier 10", bg="lightblue")
                     self.statement.grid(row=6, column=1, pady=15)
                     return False
                 else:
                     return True
             except Exception as e:
-                self.statement = tk.Label(text=f"{nameValue.get()}'s birth year\n cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth year cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
 
@@ -89,13 +89,13 @@ class App:
             try:
                 month = int(self.monthEntry.get())
                 if month < 0 or month > 12:
-                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth month\n is outside 1-12.", font="courier 10", bg="lightblue")
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth month is outside 1-12.", font="courier 10", bg="lightblue")
                     self.statement.grid(row=6, column=1, pady=15)
                     return False
                 else:
                     return True
             except Exception as e:
-                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month\n cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
         
@@ -105,13 +105,13 @@ class App:
             try:
                 day = int(self.dayEntry.get())
                 if day < 0 or day > 31:
-                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth day\n is outside 1-31.", font="courier 10", bg="lightblue")
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth day is outside 1-31.", font="courier 10", bg="lightblue")
                     self.statement.grid(row=6, column=1, pady=15)
                     return False
                 else:
                     return True
             except Exception as e:
-                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month\n cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
 
